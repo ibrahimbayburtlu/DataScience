@@ -5,7 +5,5 @@ two_digit_number = input("Type a two digit number: ")
 ####################################
 #Write your code below this line 👇
 
-first_number = int(two_digit_number) % 10
-second_number = int(int(two_digit_number) / 10)
 
-print(first_number + second_number) 
+print(int(two_digit_number[0]) +int(two_digit_number[1])) 
