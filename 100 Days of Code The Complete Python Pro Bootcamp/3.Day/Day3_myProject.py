@@ -34,7 +34,7 @@ print('''
 ''')
 # you can '''  data ''' system . very useful :) 
 
-print("Welcome to Treasure Island.")
+print("Welcome to Treasure Day.")
 print("Your missin is to find the treasure.")
 
 name = input("What is my name")
