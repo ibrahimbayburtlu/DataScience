@@ -37,7 +37,6 @@ total2 += lower_case_name2.count('e')
 
 score = total1 * 10 + total2
 
-
 if(score < 10 or score > 90):
     print(f"Your score is {score}, you go together like coke and mentos.")
 elif(score > 40 and score < 50):
