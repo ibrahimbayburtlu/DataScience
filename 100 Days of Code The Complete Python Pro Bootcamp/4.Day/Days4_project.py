@@ -57,8 +57,12 @@ print(map[select])
 print(f"Computer chose {map[computer_select]}")
 
 if select >2 and select < 0:
-    print("You typed an invalid number, you lose!") 
-if (select == 0 and computer_select == 2) or (select == 1 and computer_select == 0) or (select == 2 and computer_select == 1) :
-    print("You win!")
-elif(select == 2 and computer_select == 0) or (select == 0 and computer_select == 1) or (select == 1 and computer_select == 2):
-    print("You lose")
+    print("You typed an invalid number, you lose!")
+else:
+    if (select == 0 and computer_select == 2) or (select == 1 and computer_select == 0) or (select == 2 and computer_select == 1) :
+        print("You win!")
+    elif(select == 2 and computer_select == 0) or (select == 0 and computer_select == 1) or (select == 1 and computer_select == 2):
+        print("You lose")
+    else:
+        print("It's a draw")
+
