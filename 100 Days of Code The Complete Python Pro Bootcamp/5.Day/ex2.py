@@ -12,4 +12,4 @@ maxNumber = student_scores[0]
 for item in range(1,len(student_scores)):
     if (student_scores[item] > maxNumber):
         maxNumber = student_scores[item]
-print(maxNumber)
+print(f"The highest score in the class is:{maxNumber}")
