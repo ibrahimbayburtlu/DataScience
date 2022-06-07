@@ -1,1 +1,1 @@
- What happens if you try to encode the word 'civilization
+#from base64 import decode, encode
