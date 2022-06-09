@@ -3,8 +3,8 @@ benimString =  "İbrahim Bayburtlu"
 
 print(benimString[3])
 
-#immutability & mutable
-# benimString[0] = 'b'
+'''immutability & mutable
+benimString[0] = 'b' '''
 
 benimListem = [10,20,30,40]
 

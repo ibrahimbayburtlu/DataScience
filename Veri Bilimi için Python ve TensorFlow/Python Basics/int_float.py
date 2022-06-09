@@ -1,5 +1,3 @@
-from inspect import isgeneratorfunction
-
 
 x = 5
 
