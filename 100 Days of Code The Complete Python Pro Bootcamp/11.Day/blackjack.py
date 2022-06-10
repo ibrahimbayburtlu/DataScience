@@ -31,8 +31,6 @@ if options == 'y':
             random_cards()
             print(f"Your final hand:{user_cards},final score:{score_total(user_cards)}")
             print(f"Computer's final hand:{computer_cards},final score:{score_total(computer_cards)}")
-            if score_total(user_cards) > 21:
-                options2 = 'n' 
         elif options2 == 'n':
             print(f"Your final hand:{user_cards},final score:{score_total(user_cards)}")
             print(f"Computer's final hand:{computer_cards},final score:{score_total(computer_cards)}")
