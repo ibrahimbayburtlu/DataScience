@@ -55,6 +55,11 @@ def calculate_score(input_cards):
         return sum(input_cards)
     else:
         return sum(input_cards)
+if calculate_score(computer_cards) or calculate_score(user_cards) == 0 or calculate_score(user_cards) > 21:
+    print("You're lost!")
+
+if input("Do you want to append another card?(y/n):") == 'y':
+    user_cards.append(deal_card())
 
 
 #Hint 7: Inside calculate_score() check for a blackjack (a hand with only 2 cards: ace + 10) and return 0 instead of the actual score. 0 will represent a blackjack in our game.
