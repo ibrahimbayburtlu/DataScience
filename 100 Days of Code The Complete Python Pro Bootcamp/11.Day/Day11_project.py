@@ -47,7 +47,15 @@ for i in range(0,2):
 #and returns the score. 
 #Look up the sum() function to help you do this.
 def calculate_score(input_cards):
-    return sum(input_cards)
+    if sum(input_cards) == 21:
+        return 0
+    if sum(input_cards) > 21:
+        input_cards.remove(11)
+        input_cards.append(1)
+        return sum(input_cards)
+    else:
+        return sum(input_cards)
+
 
 #Hint 7: Inside calculate_score() check for a blackjack (a hand with only 2 cards: ace + 10) and return 0 instead of the actual score. 0 will represent a blackjack in our game.
 
