@@ -20,7 +20,7 @@ def correct_answer_solution():
     else:
         correct_answer = second_answer
     return correct_answer
-# control answer 
+# control answer
 def answer_control(score):
     if  correct_answer_solution() == your_answer:
         score +=1
