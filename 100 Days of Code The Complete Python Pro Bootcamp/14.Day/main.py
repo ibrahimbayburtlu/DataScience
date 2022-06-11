@@ -12,6 +12,7 @@ def selection():
     selection_number = random.randint(0,len(data)-1)
     return selection_number
 
+# Create function about in correct_answer_solution()
 def correct_answer_solution():
     if first_answer >= second_answer:
         correct_answer = first_answer
@@ -42,7 +43,13 @@ while flag:
     your_answer  = input("Who has more followers? Type 'A' or 'B':")
     if your_answer == 'A': your_answer = first_answer
     elif your_answer == 'B': your_answer = second_answer
-
+    if  correct_answer_solution() == your_answer:
+        system('cls')
+        score +=1
+        print(f"You're right! Current Score {score}")
+    else:
+        print(f"Sorry, that's wrong. Final Score:{score}")
+        flag = False
 
 
 
