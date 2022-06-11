@@ -7,6 +7,7 @@ from os import system
 
 score = 0
 flag = True
+
 # Create a random selection
 def selection():
     selection_number = random.randint(0,len(data)-1)
@@ -19,7 +20,7 @@ def correct_answer_solution():
     else:
         correct_answer = second_answer
     return correct_answer
-
+# control answer 
 def answer_control(score):
     if  correct_answer_solution() == your_answer:
         score +=1
@@ -27,10 +28,10 @@ def answer_control(score):
     else:
         print(f"Sorry, that's wrong. Final Score:{score}")
 
-print(logo)
 choice = data[selection()]
 
 while flag:
+    print(logo)
     # First Person
     print(f"Compare A: {choice['name']},a {choice['description']},from {choice['country']}")
     first_answer = choice['follower_count'] 
