@@ -32,23 +32,22 @@ choice = data[selection()]
 
 while flag:
     # First Person
-    print(f"{choice['name']},a {choice['description']},from {choice['country']}")
+    print(f"Compare A: {choice['name']},a {choice['description']},from {choice['country']}")
     first_answer = choice['follower_count'] 
     print(vs)
     # Second Person
     choice = data[selection()]
-    print(f"{choice['name']},a {choice['description']},from {choice['country']}")
+    print(f"Compare B{choice['name']},a {choice['description']},from {choice['country']}")
     second_answer = choice['follower_count']
     your_answer  = input("Who has more followers? Type 'A' or 'B':")
     if your_answer == 'A': your_answer = first_answer
     elif your_answer == 'B': your_answer = second_answer
+    system('cls')
     if  correct_answer_solution() == your_answer:
-        system('cls')
         score +=1
         print(f"You're right! Current Score {score}")
     else:
+        print(logo)
         print(f"Sorry, that's wrong. Final Score:{score}")
         flag = False
-
-
 
