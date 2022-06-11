@@ -10,21 +10,20 @@ import random
 # Include two different difficulty levels (e.g., 10 guesses in easy mode, only 5 guesses in hard mode).
 def create_random_number():
     return random.randint(1,100)
+def diffucultly_options():
+    options = input("Choose a diffuculty. Type 'easy' or 'hard' ").lower()
+    if options == 'easy':
+        print("You have 10 attempts remaining to guess the number")
+        return 10
+    elif options == 'hard':
+        print("You have 5 attempts remaining to guest the number")
+        return 5
 correct_number = create_random_number()
-
+attemps = diffucultly_options()
 print(logo)
 print("Welcome to the number guessing game!")
 print("I'm thinking of a number between 1 and 100.")
 print(f"Psst, the correct number {correct_number}")
-options = input("Choose a diffuculty. Type 'easy' or 'hard' ").lower()
-
-if options == 'easy':
-    attemps = 10
-    print("You have 10 attempts remaining to guess the number")
-elif options == 'hard':
-    attemps = 5
-    print("You have 5 attempts remaining to guest the number")
-
 while attemps > 0:
     guessed = int(input("Make a guess:"))
     if attemps > 1:
