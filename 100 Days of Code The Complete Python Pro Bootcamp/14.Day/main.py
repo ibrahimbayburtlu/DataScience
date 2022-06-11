@@ -27,7 +27,6 @@ def answer_control(score):
     else:
         print(f"Sorry, that's wrong. Final Score:{score}")
 
-
 print(logo)
 choice = data[selection()]
 
