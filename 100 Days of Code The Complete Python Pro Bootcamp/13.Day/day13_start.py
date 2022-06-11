@@ -38,6 +38,7 @@ total_words = pages * word_per_page
 print(total_words)
 
 # Use a Debugger
+# you focus intended 
 def mutate(a_list):
     b_list = []
     for item in a_list:
