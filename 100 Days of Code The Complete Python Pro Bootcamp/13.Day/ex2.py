@@ -1,4 +1,6 @@
-
+#Read this the code in main.py
+#Spot the problems 🐞.
+#Modify the code to fix the program.
 '''
 year = input("Which year do you want to check?")
 if year % 4 == 0:
