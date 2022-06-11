@@ -12,6 +12,7 @@ def create_random_number():
     return random.randint(1,100)
 correct_number = create_random_number()
 
+print(logo)
 print("Welcome to the number guessing game!")
 print("I'm thinking of a number between 1 and 100.")
 print(f"Psst, the correct number {correct_number}")
