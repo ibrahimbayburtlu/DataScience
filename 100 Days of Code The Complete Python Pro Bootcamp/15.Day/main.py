@@ -25,6 +25,7 @@ MENU = {
 }
 from os import system
 from sys import flags
+from tkinter import Menu
 from turtle import Turtle
 resources = {
     "water": 300,
@@ -43,5 +44,5 @@ while flag:
     # if to enter report you shown details.
     elif control == 'report':
         print(f"Water:{resources['water']}ml\nMilk:{resources['milk']}ml\nCoffee:{resources['coffee']}g\nMoney:${money}")
-    
+    # if control == "espresso":
 
