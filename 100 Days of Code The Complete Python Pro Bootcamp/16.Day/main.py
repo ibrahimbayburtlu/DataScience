@@ -14,3 +14,6 @@ timmy.color("red")
 timmy.forward(100)
 my_screen.exitonclick()
 
+
+import prettytable
+
