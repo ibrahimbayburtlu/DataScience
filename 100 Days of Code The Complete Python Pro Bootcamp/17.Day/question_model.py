@@ -1,7 +1,5 @@
-class Question():
-    def __init__(self,text,answer):
-        self.text = text
-        self.answer = answer
+class Question:
 
-p1 = Question("2+3=5","True")
-print(p1.answer)
+    def __init__(self, q_text, q_answer):
+        self.text = q_text
+        self.answer = q_answer
