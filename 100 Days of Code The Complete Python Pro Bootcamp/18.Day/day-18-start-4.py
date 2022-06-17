@@ -6,6 +6,7 @@ tim = t.Turtle()
 ########### Challenge 4 - Random Walk ########
 colours = ["CornflowerBlue", "DarkOrchid", "IndianRed", "DeepSkyBlue", "LightSeaGreen", "wheat", "SlateGray", "SeaGreen"]
 
+tim.pensize(5)
 def draw_shape():
     tim.forward(random.randint(-10,10))
     tim.right(random.randint(-360,360))
