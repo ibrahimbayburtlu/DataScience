@@ -16,7 +16,7 @@ class Player(Turtle):
         new_y = self.ycor() + MOVE_DISTANCE
         self.goto(self.xcor(),new_y)
 
-    def bounce_y(self):
+    def finish_y(self):
         self.goto(STARTING_POSITION)
 
 
