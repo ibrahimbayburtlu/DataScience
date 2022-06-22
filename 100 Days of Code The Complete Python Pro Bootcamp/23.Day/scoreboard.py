@@ -14,7 +14,7 @@ class Scoreboard(Turtle):
         self.score = 0
         self.update_scoreboard()
 
-    def update_scoreboard(self)
+    def update_scoreboard(self):
         self.clear()
         self.goto(-270,270)
         self.write(self.score, align="center",font=FONT)
