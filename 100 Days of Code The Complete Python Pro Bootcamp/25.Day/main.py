@@ -1,74 +1,32 @@
-'''
-with open("weather_data.csv") as data_files:
-    data = data_files.read()
-    print(data)
-
-import csv
-from numpy import average 
-
-with open("weather_data.csv") as data_files:
-    data = csv.reader(data_files)
-    print(data)
-    temperatures = []
-    for row in data:
-        if row[1] != "temp":
-            temperatures.append(row[1])
-    print(temperatures)
-
+import turtle
 import pandas
 
-data = pandas.read_csv("weather_data.csv")
-print(data["day"])
+screen = turtle.Screen()
+screen.title("U.S. States Game")
+image = "blank_states_img.gif"
+screen.addshape(image)
+turtle.shape(image)
 
-data_dict = data.to_dict()
-print(data_dict)
+data = pandas.read_csv("50_states.csv")
+all_states = data.state.to_list()
+guessed_states = []
 
-temp_list = data["temp"].to_list()
-print(temp_list)
-
-average = sum(temp_list) / 7
-print(average)
-
-print(data["temp"].max())
-
-# Get Data in Columns
-print(data["condition"])
-print(data.condition)
-
-# Get Data in Row
-print(data[data.day == "Monday"]) 
-
-print(data[data.temp == max(data.temp)])
-
-monday = data[data.day == "Monday"]
-monday_temp = int(monday.temp)
-monday_temp_F =monday_temp * 9/5 + 32
-print(monday_temp_F)
-
-# Create a dataframe from scratch 
-
-data_dict = {
-    "students":["Any","James","Angela"],
-    "scores":[76,56,65]
-}
-data = pandas.DataFrame(data_dict)
-print(data)
-data.to_csv("new_data.csv")
-'''
-import pandas
-
-data = pandas.read_csv("2018_Central_Park_Squirrel_Census_-_Squirrel_Data.csv")
-grey_squirels=len(data["Primary Fur Color"] == "Grey")
-red_squirels=len(data["Primary Fur Color"] == "Cinnammon")
-black_squirels=len(data["Primary Fur Color"] == "Black")
-
-print(grey_squirels)
-print(red_squirels)
-print(black_squirels)
-
-data_dict = {
-    "Fur Color":["Gray","Cinnamon","Black"],
-    "Count":[grey_squirels,red_squirels,black_squirels]
-}
-df = pandas.DataFrame(data_dict)
-df.to_csv("squirrel_count.cvs")
+while len(guessed_states) < 50:
+    answer_state = screen.textinput(title=f"{len(guessed_states)}/50 States Correct",
+                                    prompt="What's another state's name?").title()
+    if answer_state == "Exit":
+        missing_states = []
+        for state in all_states:
+            if state not in guessed_states:
+                missing_states.append(state)
+        new_data = pandas.DataFrame(missing_states)
+        new_data.to_csv("states_to_learn.csv")
+        break
+    if answer_state in all_states:
+        guessed_states.append(answer_state)
+        t = turtle.Turtle()
+        t.hideturtle()
+        t.penup()
+        state_data = data[data.state == answer_state]
+        t.goto(int(state_data.x), int(state_data.y))
+        t.write(answer_state)
