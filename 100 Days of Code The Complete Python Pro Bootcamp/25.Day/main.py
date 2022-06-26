@@ -1,3 +1,12 @@
-with open("weather_data.csv") as file:
-    data = file.read()
-print(data)
+'''
+with open("weather_data.csv") as data_files:
+    data = data_files.readlines()
+    print(data)
+'''
+
+import csv 
+with open("weather_data.csv") as data_file:
+    data = csv.reader(data_file)
+    print(data)
+    for row in data:
+        print(row)
