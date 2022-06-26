@@ -1,3 +1,4 @@
+'''
 with open("weather_data.csv") as data_files:
     data = data_files.read()
     print(data)
@@ -53,3 +54,21 @@ data_dict = {
 data = pandas.DataFrame(data_dict)
 print(data)
 data.to_csv("new_data.csv")
+'''
+import pandas
+
+data = pandas.read_csv("2018_Central_Park_Squirrel_Census_-_Squirrel_Data.csv")
+grey_squirels=len(data["Primary Fur Color"] == "Grey")
+red_squirels=len(data["Primary Fur Color"] == "Cinnammon")
+black_squirels=len(data["Primary Fur Color"] == "Black")
+
+print(grey_squirels)
+print(red_squirels)
+print(black_squirels)
+
+data_dict = {
+    "Fur Color":["Gray","Cinnamon","Black"],
+    "Count":[grey_squirels,red_squirels,black_squirels]
+}
+df = pandas.DataFrame(data_dict)
+df.to_csv("squirrel_count.cvs")
