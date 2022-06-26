@@ -13,3 +13,7 @@ with open("weather_data.csv") as data_files:
             temperatures.append(row[1])
     print(temperatures)
 
+import pandas
+
+data = pandas.read_csv("weather_data.csv")
+print(data["day"])
