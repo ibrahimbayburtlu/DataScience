@@ -22,3 +22,13 @@ print(sort_names)
 
 sort_names = [i.upper() for i in names if len(i) > 5]
 print(sort_names)
+
+from multiprocessing.sharedctypes import Value
+import random 
+names = ["Alex","Beth","Caroline","Dave","Elanor","Freddle"]
+
+students_scores = {student:random.randint(1,100) for student in names}
+print(students_scores)
+
+passed_students = { student:score for (student,score) in students_scores.items() if score >= 60}
+print(passed_students)
