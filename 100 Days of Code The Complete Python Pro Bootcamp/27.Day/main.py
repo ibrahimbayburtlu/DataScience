@@ -13,7 +13,6 @@ my_label.pack(side="left")
 import turtle
 
 tim = turtle.Turtle()
-tim.write("Some Text")
 
 
 
