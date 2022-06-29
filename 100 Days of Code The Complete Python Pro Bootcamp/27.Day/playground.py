@@ -1,8 +1,7 @@
 # *args: Positional Variable-Length Arguments
 def add(*args):
     # print(args[1])
-
-    sum = 0
+    # sum = 0
     for n in args:
         sum += n
     return sum
