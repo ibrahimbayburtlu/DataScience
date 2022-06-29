@@ -1,19 +1,30 @@
-from pickle import TRUE
-import tkinter
+from tkinter import *
 
-window = tkinter.Tk()
+window = Tk()
 window.title("My First GUI Program")
 window.minsize(width=500,height=300)
 
 
 #Label
-my_label = tkinter.Label(text="I am a Label",font=("Arial",12,"bold"))
-my_label.pack(side="left")
+my_label = Label(text="I am a Label",font=("Arial",12,"bold"))
+my_label.pack()
 
-import turtle
+my_label["text"] = "New Text"
+my_label.config(text="New Text")
 
-tim = turtle.Turtle()
+# Button 
 
+def button_clicked():
+    print("I got clicked")
+    new_text = input.get()
+    my_label.config(text=new_text)
 
+button = Button(text="Click Me",command=button_clicked)
+button.pack()
 
+# Entry
+
+input = Entry(width=10)
+input.pack()
+print(input.get())
 window.mainloop()
