@@ -1,0 +1,5 @@
+merhabalar.com|amazon@gmail.com|12345
+merhabalar.com|netflix@gmail.com|12345*
+|@gmail.com|
+|@gmail.com|
+|@gmail.com|
