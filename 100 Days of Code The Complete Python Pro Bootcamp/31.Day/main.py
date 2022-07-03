@@ -39,6 +39,7 @@ def is_known():
     data.to_csv("data/words_to_learn.csv", index=False)
     next_card()
 
+# ---------------------------- UI SETUP ------------------------------- #
 
 window = Tk()
 window.title("Flashy")
