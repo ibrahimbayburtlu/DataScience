@@ -1,6 +1,5 @@
 import smtplib
 
-
 my_email = "ibrahimbayburtlu5@gmail.com"
 password = "iBo12345*"
 
