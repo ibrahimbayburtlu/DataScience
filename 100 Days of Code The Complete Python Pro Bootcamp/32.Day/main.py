@@ -12,6 +12,7 @@ today = dt.datetime.now()
 today_tuple = (today.month,today.day)
 
 data = pd.read_csv("32.Day/birthdays.csv")
+# birthdays_dict = {key:value}
 birthdays_dict = {(data_row["month"],data_row["day"]):data_row for (index, data_row) in data.iterrows()}
 
 
