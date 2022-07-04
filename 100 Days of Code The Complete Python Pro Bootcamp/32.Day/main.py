@@ -1,26 +1,13 @@
-import smtplib
+##################### Extra Hard Starting Project ######################
 
-my_email = "ibrahimbayburtlu5@gmail.com"
-password = "iBo12345*"
+# 1. Update the birthdays.csv
 
-with smtplib.SMTP("smtp.gmail.com",port=535) as connection:
-    connection.starttls() # use security
-    connection.login(user=my_email,password=password)
-    connection.sendmail(from_addr=my_email,
-    to_addrs="ibrahimbayburtluweb3learning@gmail.com",
-    msg="Subject:Hello\n\nThis is the body of my email.")
+# 2. Check if today matches a birthday in the birthdays.csv
+
+# 3. If step 2 is true, pick a random letter from letter templates and replace the [NAME] with the person's actual name from birthdays.csv
+
+# 4. Send the letter generated in step 3 to that person's email address.
 
 
 
-import datetime as dt
 
-now = dt.datetime.now()
-if now.year == 2022:
-    print("hello world")
-day_of_week = now.weekday()
-print(day_of_week)
-print(now)
-
-
-date_of_birth = dt.datetime(year=2000,month=11,day=4,hour=12,minute=30)
-print(date_of_birth)
