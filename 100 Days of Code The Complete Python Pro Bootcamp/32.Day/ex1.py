@@ -6,9 +6,10 @@ import random
 MY_EMAIL = "ibrahimbayburtlu@std.yildiz.edu.tr"
 MY_PASSWORD = "r4dM9gqN"
 
+'''
 now = dt.datetime.now()
 weekday = now.weekday()
-if weekday == 0:
+if weekday == weekday:
     with open("32.Day/quotes.txt") as quote_file:
         all_quotes = quote_file.readlines()
         quote = random.choice(all_quotes)
@@ -22,7 +23,7 @@ if weekday == 0:
             to_addrs=MY_EMAIL,
             msg=f"Subject:Monday Motivation\n\n{quote}"
         )
-
+'''
 
 
 ## Sending Email with Python
