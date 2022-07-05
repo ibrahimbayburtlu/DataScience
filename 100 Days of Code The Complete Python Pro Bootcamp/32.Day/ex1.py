@@ -4,7 +4,7 @@ import datetime as dt
 import random
 
 MY_EMAIL = "ibrahimbayburtlu@std.yildiz.edu.tr"
-MY_PASSWORD = "r4dM9gqN"
+MY_PASSWORD = "*****"
 
 '''
 now = dt.datetime.now()
