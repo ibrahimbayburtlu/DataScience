@@ -32,6 +32,5 @@ print(sunrise.split("T")[1].split(":")[0])
 print(sunset.split("T")[1].split(":")[0])
 
 
-
 time_now = datetime.now()
 print(time_now.hour)
