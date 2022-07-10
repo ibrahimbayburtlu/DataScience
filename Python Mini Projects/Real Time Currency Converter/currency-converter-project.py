@@ -82,11 +82,11 @@ class App(tk.Tk):
         result = regex.match(string)
         return (string == "" or (string.count('.') <= 1 and result is not None))
 
-if __name__ == '__main__':
-    url = 'https://api.exchangerate-api.com/v4/latest/USD'
-    converter = RealTimeCurrencyConverter(url)
 
-    App(converter)    
+url = 'https://api.exchangerate-api.com/v4/latest/USD'
+converter = RealTimeCurrencyConverter(url)
+
+App(converter)    
     
-    mainloop()
+mainloop()
 
