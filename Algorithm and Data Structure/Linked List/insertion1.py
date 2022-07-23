@@ -26,5 +26,5 @@ e3 = Node("Wed")
 list.head.next = e2
 e2.next = e3
 
-list.atbegining("Sun")
+list.atbeginning("Sun")
 list.listprint()
