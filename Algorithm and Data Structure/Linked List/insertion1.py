@@ -10,7 +10,7 @@ class SLinkedList:
     def listprint(self):
         listval = self.head
         while listval is not None:
-            print(listval)
+            print(listval.data)
             listval = listval.next
     def atbeginning(self,newdata):
         newnode = Node(newdata)
